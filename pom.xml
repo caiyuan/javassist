@@ -12,6 +12,8 @@
   <url>http://www.javassist.org/</url>
 
   <properties>
+    <java.version>11</java.version>
+    <java.home>/Users/Ryan/.sdkman/candidates/java/11.0.6.hs-adpt/</java.home>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <organization>
@@ -151,8 +153,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.2</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>11</source>
+          <target>11</target>
           <testSource>11</testSource>
           <testTarget>11</testTarget>
           <testCompilerArgument>-parameters</testCompilerArgument>
