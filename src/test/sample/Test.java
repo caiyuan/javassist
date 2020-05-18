@@ -37,8 +37,19 @@ public class Test {
 	    CtMethod fMethod = cc.getDeclaredMethod("f");
 	    CtMethod gMethod = CtNewMethod.copy(fMethod, "g", cc, null);
 	    cc.addMethod(gMethod);
-	    cc.writeFile();	// update the class file
+	    // cc.writeFile();	// update the class file
 	    System.out.println("g() was added.");
+
+		{
+			CtClass returnType = pool.get(void.class.getName());
+			CtClass paramType = pool.get(String.class.getName());
+			CtMethod tMethod = new CtMethod(returnType, "t", new CtClass[]{paramType}, cc);
+			tMethod.setBody("{System.out.println(\"Hello, \" + $1);}");
+			cc.addMethod(tMethod);
+			cc.writeFile();
+			System.out.println("t() was added.");
+		}
+
 	}
     }
 }
