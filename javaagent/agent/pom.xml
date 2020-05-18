@@ -31,9 +31,6 @@
                     <archive>
                         <manifestEntries>
                             <Premain-Class>me.caiyuan.javaagent.Agent</Premain-Class>
-                            <Agent-Class>me.caiyuan.javaagent.Agent</Agent-Class>
-                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
-                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
                     </archive>
                 </configuration>
